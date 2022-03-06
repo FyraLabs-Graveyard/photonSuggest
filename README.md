@@ -1,31 +1,23 @@
 # AutoSuggest APIs
 
-![Autosuggestion APIs](https://user-images.githubusercontent.com/17960677/100518437-782e2b80-31b7-11eb-9dac-c85327e857c2.png)
-
->**Google, Duckduckgo, Bing, Qwant and other autosuggestion APIs**
+>**Google, Duckduckgo, Bing, and other autosuggestion APIs**
 
 ## Example
 
 The Following Code snippet will help you understand how to use this.
 
-```js
-var Suggest = require("node-suggest");
+```ts
+import * as suggest from "@getskye/suggest";
 
-(async function() {
-  await Suggest.google("How to");
-  await Suggest.ddg("How to");
-  await Suggest.bing("How to");
-  await Suggest.qwant("How to");
-  await Suggest.yahoo("How to");
-  await Suggest.startpage("How to");
-  await Suggest.dogpile("How to");
-  await Suggest.swisscows("How to");
-  await Suggest.ask("How to");
-  await Suggest.brave("How to");
+(async () => {
+  await suggest.google("How to");
+  await suggest.ddg("How to");
+  await suggest.yahoo("How to");
+  await suggest.brave("How to");
 })();
 ```
 
-It also has a `Suggest.all()` method which combines all results together, Sample output will be ass follows:
+It also has a `suggest.all()` method which combines all results together, Sample output will be as follows:
 
 ```js
 [
@@ -88,41 +80,14 @@ It also has a `Suggest.all()` method which combines all results together, Sample
 ]
 ```
 
-## Contributing
-
-Thank you for your interest in contributing, If you feel like there's something missing or any new feature can be added, just create a PR and I will see the rest.
-
-## Help
-
-You can contact me on social media, Everything about me can be found [here](https://theabbie.github.io)
-
-## Installation
-
-### Requirements
-
-* Node.Js installed
-
-### Dev Dependencies
-
-* Axios
-* Cheerio (For parsing Google suggest XML)
-
 ## Credits
 
 * Google
 * DuckDuckGo
 * Bing
-* Qwant
 * Yahoo
-* Startpage
-* Dogpile
-* Swisscows
-* Ask.com
 * Brave
-
-## Contact
-
-Contact me anywhere, just visit [my portfolio](https://theabbie.github.io)
+* [theabbie](https://github.com/theabbie/suggest)
 
 ## License
 
