@@ -1,7 +1,8 @@
 import axios from "axios";
 import { load } from "cheerio";
+import duckduckgo from './engines/ddg'
 
-enum Engine {
+export enum Engine {
   GOOGLE = "https://suggestqueries.google.com/complete/search?output=toolbar&hl=en&q=",
   DDG = "https://duckduckgo.com/ac/?kl=wt-wt&q=",
   BING = "https://www.bingapis.com/api/v7/suggestions?appid=6D0A9B8C5100E9ECC7E11A104ADD76C10219804B&q=",
@@ -17,10 +18,7 @@ export const google = async (query: string): Promise<Result> => {
   return $("suggestion").toArray().map(x => x.attribs.data);
 }
 
-export const ddg = async (query: string): Promise<Result> => {
-  const { data } = await axios.get<{ phrase: string }[]>(Engine.DDG + query);
-  return data.map(x => x.phrase);
-}
+export const ddg = duckduckgo
 
 export const yahoo = async (query: string): Promise<Result> => {
   const { data } = await axios.get<{
@@ -39,7 +37,7 @@ export const brave = async (query: string): Promise<Result> => {
 export const all = async (query: string): Promise<Result> => {
   const all = [
     ...await google(query),
-    ...await ddg(query),
+    ...(await ddg(query)).suggestions,
     ...await yahoo(query),
     ...await brave(query),
   ];
