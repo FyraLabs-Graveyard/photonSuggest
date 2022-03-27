@@ -1,5 +1,5 @@
 {
-  "name": "@getskye/suggest",
+  "name": "@fyralabs/photon-suggest",
   "version": "1.0.1",
   "description": "Google, DuckDuckGo, Bing, and other autosuggestion APIs",
   "main": "dist/index.js",
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/getskye/suggest.git"
+    "url": "git+https://github.com/fyralabs/photonSuggest.git"
   },
   "keywords": [
     "google",
@@ -20,12 +20,12 @@
     "autofill",
     "autosuggest"
   ],
-  "author": "Innatical, LLC",
+  "author": "Fyra Labs <contact@fyralabs.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/getskye/suggest/issues"
+    "url": "https://github.com/fyralabs/photonSuggest/issues"
   },
-  "homepage": "https://github.com/getskye/suggest#readme",
+  "homepage": "https://github.com/fyralabs/photonSuggest#readme",
   "dependencies": {
     "axios": "^0.26.0",
     "cheerio": "^1.0.0-rc.10"

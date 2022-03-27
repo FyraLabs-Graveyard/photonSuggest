@@ -7,7 +7,7 @@
 The Following Code snippet will help you understand how to use this.
 
 ```ts
-import * as suggest from "@getskye/suggest";
+import * as suggest from "@fyralabs/photon-suggest";
 
 (async () => {
   await suggest.google("How to");
